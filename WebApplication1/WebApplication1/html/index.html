@@ -5,13 +5,28 @@
     
 </head>
 <body>
-    <input class="weightInput" type="text" placeholder="Введите кол-во байтов" />
-    <button class="weight">Перевести</button>
+    <input class="byte" type="text" placeholder="Введите кол-во байтов" />
+    <button class="byteBtn">Перевести</button>
     <br />
     <br />
     <br />
+    <input class="money" type="text" placeholder="Введите сумму"/>
+    <button class="moneyBtn">Узнать</button>
 
+    <script>
+        let byte = document.querySelector(".byte")
+        let byteBtn = document.querySelector(".byteBtn")
 
+        byteBtn.addEventListener("click", () => {
+            window.location.href = "byte/" + byte.value
+        })
+
+        let money = document.querySelector(".money")
+        let moneyBtn = document.querySelector(".moneyBtn")
+        moneyBtn.addEventListener("click", () => {
+            window.location.href = "convertMoney/" + money.value
+        })
+    </script>
    
 </body>
 </html>
